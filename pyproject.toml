@@ -3,6 +3,9 @@ name = "support_service"
 version = "0.1.0"
 description = "Sandbox"
 readme = "README.md"
+dependencies = [
+    "litestar[sqlalchemy]>=2.17.0",
+]
 
 [tool.mypy]
 python_version = "3.13"

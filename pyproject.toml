@@ -1,0 +1,29 @@
+[project]
+name = ""
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+check_untyped_defs = true
+strict_optional = true
+strict_equality = true
+no_implicit_optional = true
+
+[tool.flake8]
+format = "wemake"
+max-line-complexity = 16
+max-try-body-length = 2
+select = ["WPS"]
+
+ignore = [
+    "C", "D", "E", "F", "DAR", "RST", "Q", "I", "S", "W503",
+    "WPS110", "WPS123",
+    "WPS201", "WPS237",
+    "WPS300", "WPS305", "WPS306", "WPS332", "WPS348",
+    "WPS410", "WPS412", "WPS430",
+    "WPS602", "WPS605", "WPS476"]
+
+per-file-ignores = []

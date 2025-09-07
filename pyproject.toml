@@ -3,8 +3,12 @@ name = "support_service"
 version = "0.1.0"
 description = "Sandbox"
 readme = "README.md"
+requires-python = ">=3.13"
 dependencies = [
+    "alembic>=1.16.4",
     "litestar[sqlalchemy,standard]>=2.17.0",
+    "psycopg>=3.2.9",
+    "psycopg-binary>=3.2.9",
     "pydantic-settings>=2.10.1",
     "pydantic[email]>=2.11.7",]
 
@@ -31,4 +35,5 @@ ignore = [
     "WPS602", "WPS605", "WPS476"]
 
 per-file-ignores = [
-    "*/__init__.py: WPS347,WPS440",]
+    "*/__init__.py: WPS347,WPS440",
+    "env.py: WPS347",]

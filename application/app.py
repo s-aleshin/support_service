@@ -1,11 +1,6 @@
-from litestar import Litestar, get
+from litestar import Litestar
 
-from .config import Settings, get_settings
-
-
-@get("/")
-async def settings() -> Settings:
-    return get_settings()
+from .config import sql_alchemy_plugin
 
 
-app = Litestar(route_handlers=[settings], on_startup=(get_settings,))
+app = Litestar(plugins=[sql_alchemy_plugin])

@@ -28,6 +28,8 @@ ignore = [
 
 external = []
 
+[lint.extend-per-file-ignores]
+"env.py" = ["F401", "E402", "F403"]
 
 [lint.flake8-annotations]
 mypy-init-return = true
